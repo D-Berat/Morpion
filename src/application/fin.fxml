@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="500.0" spacing="30.0" xmlns="http://javafx.com/javafx/21.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.FinController">
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <children>
+      <Label fx:id="labelResultat" text="Résultat" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <VBox alignment="CENTER" prefWidth="100.0" spacing="10.0" style="-fx-border-color: black; -fx-border-width: 1; -fx-background-color: #f0f0f0;">
+         <children>
+            <Label text="Tableau des Scores">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" spacing="50.0">
+               <children>
+                  <Label fx:id="labelScoreJ1" text="Joueur 1 : 0" />
+                  <Label fx:id="labelScoreJ2" text="Joueur 2 : 0" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <VBox.margin>
+            <Insets left="50.0" right="50.0" />
+         </VBox.margin>
+      </VBox>
+      <VBox alignment="CENTER" spacing="15.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#gererRejouer" prefHeight="35.0" prefWidth="200.0" text="Rejouer (Mêmes joueurs)" />
+            <Button mnemonicParsing="false" onAction="#gererNouvellePartie" prefHeight="35.0" prefWidth="200.0" text="Changer de joueurs" />
+            <Button mnemonicParsing="false" onAction="#gererQuitter" prefHeight="35.0" prefWidth="200.0" text="Quitter le jeu" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
